@@ -34,8 +34,14 @@ async function ieladetChataZinasJson()
     i = 0;
     while ( i < await dati.length )
     {
-        console.log(i);
+        //console.log(i);
         zinas.innerHTML = zinas.innerHTML + dati[i]['vards'] + ': ' + dati[i]['zina'] + '<br />';
         i = i + 1;
     }
+
+
+    zinas.scrollTop = zinas.scrollHeight;    
 }//šeit beidzas funkcija ieladetChataZinasJson()
+
+
+setInterval(ieladetChataZinasJson, 1000)
